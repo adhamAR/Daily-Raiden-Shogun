@@ -13,7 +13,7 @@ module.exports = {
 
     async function getData() {
       await fetch(
-        "https://api.waifu.im/random/?selected_tags=raiden-shogun"
+        "https://api.waifu.im/search/?included_tags=raiden-shogun&is_nsfw=true"
       ).then(async (res) => {
         let data = await res.json();
 
@@ -39,4 +39,4 @@ module.exports = {
   },
 };
 
-("https://api.waifu.im/random/?selected_tags=raiden-shogun");
+("https://api.waifu.im/search/?included_tags=raiden-shogun");
